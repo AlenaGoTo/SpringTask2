@@ -4,7 +4,8 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
- 
+    // метод будет выполнен при создании контекста, и его результат станет объектом, управляемым Спрингом
+    // бины можно вызывать из контекста по имени - getBean("name")
     @Bean(name="helloworld")
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();
